@@ -29,12 +29,6 @@ background:linear-gradient(135deg,#050b14,#0f2027,#1a2a40);
 color:var(--text-light);
 }
 
-.container{
-width:90%;
-max-width:1100px;
-margin:auto;
-}
-
 /* HERO */
 header{
 background:linear-gradient(to bottom,rgba(5,11,20,0.85),rgba(5,11,20,1)),
@@ -72,6 +66,51 @@ transition:0.3s;
 background:var(--neon);
 color:#000;
 box-shadow:0 0 20px var(--neon);
+}
+
+/* TOOLS SECTION */
+.tools{
+padding:90px 0;
+text-align:center;
+}
+
+.tools h2{
+margin-bottom:40px;
+font-size:2rem;
+color:var(--neon);
+}
+
+.grid{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+}
+
+.card{
+background:var(--panel);
+backdrop-filter:blur(10px);
+border-radius:15px;
+width:230px;
+padding:25px;
+border:1px solid rgba(0,243,255,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,243,255,0.3);
+border-color:var(--neon);
+}
+
+.card h3{
+color:var(--neon);
+margin-bottom:10px;
+}
+
+.card p{
+color:var(--text-muted);
+font-size:0.9rem;
 }
 
 /* ENROLL */
@@ -135,6 +174,7 @@ margin-top:40px;
 
 @media(max-width:768px){
 header h1{font-size:2rem;}
+.grid{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
@@ -142,17 +182,36 @@ header h1{font-size:2rem;}
 <body>
 
 <header>
-<div class="container">
 <h1>Dev-zibah Analytics</h1>
 <p>Master Data Analysis & Boost Your Career with Practical, Hands-On Training.</p>
-<a href="#enroll" class="btn">Enroll Now for ₦7,000</a>
-</div>
+<a href="#enroll" class="btn">Enroll Now for ₦3,000</a>
 </header>
 
+<section class="tools">
+<h2>Tools You Will Learn</h2>
+<div class="grid">
+<div class="card">
+<h3>Python</h3>
+<p>Clean, analyze and visualize data using Pandas and NumPy.</p>
+</div>
+<div class="card">
+<h3>R Programming</h3>
+<p>Master statistical computing and powerful graphics.</p>
+</div>
+<div class="card">
+<h3>SPSS</h3>
+<p>Run accurate statistical tests and interpret outputs.</p>
+</div>
+<div class="card">
+<h3>SAS</h3>
+<p>Enterprise-level analytics used in clinical research.</p>
+</div>
+</div>
+</section>
+
 <section id="enroll" class="enroll">
-<div class="container">
 <h2>Start Your Journey Today</h2>
-<div class="price-tag">Only ₦7,000</div>
+<div class="price-tag">Only ₦3,000</div>
 
 <form id="enrollForm">
 
@@ -162,8 +221,8 @@ header h1{font-size:2rem;}
 <label>EMAIL ADDRESS</label>
 <input type="email" id="email" placeholder="Enter your email address" required>
 
-<label>UNIVERSITY (Department) </label>
-<input type="text" id="university" placeholder="e.g. Olabisi Onabanjo University (Statistics)" required>
+<label>UNIVERSITY / INSTITUTION</label>
+<input type="text" id="university" placeholder="e.g. University of Lagos" required>
 
 <label>LEVEL</label>
 <select id="level" required>
@@ -177,7 +236,6 @@ header h1{font-size:2rem;}
 <button type="submit" class="btn">Proceed to Payment via WhatsApp</button>
 
 </form>
-</div>
 </section>
 
 <footer>
@@ -195,11 +253,7 @@ var level = document.getElementById("level").value;
 
 var phoneNumber = "12523475356";
 
-var message = `Hello Dev-zibah Analytics, my name is ${name}. 
-My email is ${email}. 
-I am from ${university}. 
-I am currently in ${level}. 
-I am enrolling for the Data Analysis Mastery class (₦7,000) and would like to proceed with payment.`;
+var message = `Hello Dev-zibah Analytics, my name is ${name}. My email is ${email}. I am from ${university}, currently in ${level}. I am enrolling for the Data Analysis Mastery class (₦3,000) and would like to proceed with payment.`;
 
 var encodedMessage = encodeURIComponent(message);
 
