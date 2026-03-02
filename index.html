@@ -31,8 +31,6 @@ color:var(--text-light);
 
 /* HERO */
 header{
-background:linear-gradient(to bottom,rgba(5,11,20,0.85),rgba(5,11,20,1)),
-url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80') center/cover;
 padding:120px 0;
 text-align:center;
 border-bottom:1px solid rgba(0,243,255,0.2);
@@ -48,7 +46,12 @@ margin-bottom:15px;
 
 header p{
 color:var(--text-muted);
-margin-bottom:30px;
+margin-bottom:15px;
+}
+
+.highlight{
+color:var(--neon);
+font-weight:600;
 }
 
 .btn{
@@ -60,6 +63,7 @@ color:var(--neon);
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
+background:transparent;
 }
 
 .btn:hover{
@@ -68,7 +72,7 @@ color:#000;
 box-shadow:0 0 20px var(--neon);
 }
 
-/* TOOLS SECTION */
+/* TOOLS */
 .tools{
 padding:90px 0;
 text-align:center;
@@ -113,18 +117,49 @@ color:var(--text-muted);
 font-size:0.9rem;
 }
 
-/* ENROLL */
-.enroll{
-padding:100px 0;
-background:linear-gradient(to top,#02060d,var(--bg-dark));
+/* PRICING */
+.pricing{
+padding:80px 0;
 text-align:center;
 }
 
-.price-tag{
-font-size:2.5rem;
+.plan-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.plan{
+background:var(--panel);
+padding:40px;
+border-radius:15px;
+width:280px;
+border:1px solid rgba(0,243,255,0.2);
+transition:0.3s;
+}
+
+.plan:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,243,255,0.3);
+}
+
+.plan h3{
 color:var(--neon);
-margin:20px 0 40px;
+margin-bottom:15px;
+}
+
+.price{
+font-size:1.8rem;
+margin-bottom:15px;
+color:var(--accent);
 font-weight:bold;
+}
+
+/* ENROLL */
+.enroll{
+padding:100px 0;
+text-align:center;
 }
 
 form{
@@ -174,7 +209,7 @@ margin-top:40px;
 
 @media(max-width:768px){
 header h1{font-size:2rem;}
-.grid{flex-direction:column;align-items:center;}
+.grid,.plan-container{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
@@ -183,57 +218,73 @@ header h1{font-size:2rem;}
 
 <header>
 <h1>Dev-zibah Analytics</h1>
-<p>Master Data Analysis & Boost Your Career with Practical, Hands-On Training.</p>
-<a href="#enroll" class="btn">Enroll Now for ₦5,000</a>
+<p>Data Analysis Mastery Program</p>
+<p class="highlight">Commences: 16th March 2026 | Duration: 4 Months</p>
+<a href="#enroll" class="btn">Enroll Now</a>
 </header>
 
 <section class="tools">
-<h2>Tools You Will Learn</h2>
+<h2>Core Tools Covered</h2>
 <div class="grid">
-<div class="card">
-<h3>Python</h3>
-<p>Clean, analyze and visualize data using Pandas and NumPy.</p>
+<div class="card"><h3>Python</h3><p>Data cleaning, analysis & visualization.</p></div>
+<div class="card"><h3>R Programming</h3><p>Advanced statistical computing.</p></div>
+<div class="card"><h3>SPSS</h3><p>Statistical testing & reporting.</p></div>
+<div class="card"><h3>SAS</h3><p>Enterprise & clinical analytics.</p></div>
+<div class="card"><h3>Power BI</h3><p>Interactive dashboards & business intelligence.</p></div>
+<div class="card"><h3>SQL</h3><p>Database querying & data extraction.</p></div>
 </div>
-<div class="card">
-<h3>R Programming</h3>
-<p>Master statistical computing and powerful graphics.</p>
+</section>
+
+<section class="pricing">
+<h2>Select Your Plan</h2>
+<div class="plan-container">
+
+<div class="plan">
+<h3>Standard Plan</h3>
+<div class="price">₦5,000 / Month</div>
+<p>Python, R, SPSS, SAS</p>
 </div>
-<div class="card">
-<h3>SPSS</h3>
-<p>Run accurate statistical tests and interpret outputs.</p>
+
+<div class="plan">
+<h3>Premium Plan</h3>
+<div class="price">₦10,000 / Month</div>
+<p>Includes Everything in Standard + Power BI & SQL</p>
 </div>
-<div class="card">
-<h3>SAS</h3>
-<p>Enterprise-level analytics used in clinical research.</p>
-</div>
+
 </div>
 </section>
 
 <section id="enroll" class="enroll">
-<h2>Start Your Journey Today</h2>
-<div class="price-tag">Only ₦5,000</div>
+<h2>Register Now</h2>
 
 <form id="enrollForm">
 
 <label>FULL NAME</label>
-<input type="text" id="name" placeholder="Enter your full name" required>
+<input type="text" id="name" required>
 
 <label>EMAIL ADDRESS</label>
-<input type="email" id="email" placeholder="Enter your email address" required>
+<input type="email" id="email" required>
 
 <label>UNIVERSITY / INSTITUTION (Department)</label>
-<input type="text" id="university" placeholder="e.g. Olabisi Onabajo University (Statistics)" required>
+<input type="text" id="university" required>
 
 <label>LEVEL</label>
 <select id="level" required>
 <option value="">Select Your Level</option>
-<option value="100 Level">100 Level</option>
-<option value="200 Level">200 Level</option>
-<option value="300 Level">300 Level</option>
-<option value="400 Level">400 Level</option>
+<option>100 Level</option>
+<option>200 Level</option>
+<option>300 Level</option>
+<option>400 Level</option>
 </select>
 
-<button type="submit" class="btn">Proceed to Payment via WhatsApp</button>
+<label>SELECT PLAN</label>
+<select id="plan" required>
+<option value="">Choose Plan</option>
+<option value="Standard Plan - ₦5,000 per month">Standard Plan - ₦5,000 / Month</option>
+<option value="Premium Plan - ₦10,000 per month">Premium Plan - ₦10,000 / Month (Includes Power BI & SQL)</option>
+</select>
+
+<button type="submit" class="btn">Proceed to WhatsApp</button>
 
 </form>
 </section>
@@ -250,10 +301,11 @@ var name = document.getElementById("name").value;
 var email = document.getElementById("email").value;
 var university = document.getElementById("university").value;
 var level = document.getElementById("level").value;
+var plan = document.getElementById("plan").value;
 
-var phoneNumber = "2348107142883";
+var phoneNumber = "+2348107142883";
 
-var message = `Hello Dev-zibah Analytics, my name is ${name}. My email is ${email}. I am from ${university}, currently in ${level}. I am enrolling for the Data Analysis Mastery class (₦5,000) and would like to proceed with payment.`;
+var message = `Hello Dev-zibah Analytics, my name is ${name}. My email is ${email}. I am from ${university}, currently in ${level}. I am enrolling for the ${plan}. The program commences 16th March 2026 and runs for 4 months. I would like to proceed with payment.`;
 
 var encodedMessage = encodeURIComponent(message);
 
@@ -262,4 +314,4 @@ window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 </script>
 
 </body>
-</html>
+  </html>
