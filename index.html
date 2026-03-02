@@ -255,24 +255,47 @@ align-items:center;
 </footer>
 
 <script>
-document.getElementById("enrollForm").addEventListener("submit", function(e){
+document.addEventListener("DOMContentLoaded", function(){
+
+const form = document.getElementById("enrollForm");
+
+form.addEventListener("submit", function(e){
 e.preventDefault();
 
-var name = document.getElementById("name").value;
-var email = document.getElementById("email").value;
-var university = document.getElementById("university").value;
-var level = document.getElementById("level").value;
-var plan = document.getElementById("plan").value;
+const name = document.getElementById("name").value.trim();
+const email = document.getElementById("email").value.trim();
+const university = document.getElementById("university").value.trim();
+const level = document.getElementById("level").value;
+const plan = document.getElementById("plan").value;
 
-var phoneNumber = "+2348107142883";
+if(!name || !email || !university || !level || !plan){
+alert("Please complete all fields.");
+return;
+}
 
-var message = `Hello Dev-zibah Analytics, my name is ${name}. My email is ${email}. I am from ${university}, currently in ${level}. I am enrolling for the ${plan}. The program commences 16th March 2026 and runs for 4-6 months. I would like to proceed with payment.`;
+// IMPORTANT: Use international format without +
+// If your WhatsApp is Nigerian number like 0803..., convert to 234803...
+const phoneNumber = "2348107142883"; 
 
-var encodedMessage = encodeURIComponent(message);
+const message =
+`Hello Dev-zibah Analytics,
+My name is ${name}.
+Email: ${email}.
+Institution: ${university}.
+Level: ${level}.
+Selected Plan: ${plan}.
+The program commences 16th March 2026 and runs for 4-6 months.
+I would like to proceed with payment.`;
 
-window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+const whatsappURL =
+"https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+// Open in new tab (more reliable on mobile)
+window.open(whatsappURL, "_blank");
+
 });
-</script>
 
+});
+   </script>
 </body>
 </html>
