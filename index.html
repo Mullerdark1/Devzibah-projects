@@ -9,7 +9,7 @@
 
 <style>
 :root{
---bg-dark:#071421;
+--bg:#071421;
 --card:#0d2236;
 --accent:#00e5ff;
 --accent2:#ff00cc;
@@ -31,19 +31,14 @@ color:var(--text);
 
 header{
 text-align:center;
-padding:100px 20px;
+padding:90px 20px;
 }
 
 header h1{
-font-size:2.5rem;
+font-size:2.4rem;
 background:linear-gradient(90deg,var(--accent),var(--accent2));
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-margin-bottom:10px;
-}
-
-header p{
-color:var(--muted);
 margin-bottom:10px;
 }
 
@@ -53,12 +48,12 @@ font-weight:600;
 }
 
 section{
-padding:70px 20px;
+padding:60px 20px;
 text-align:center;
 }
 
 h2{
-margin-bottom:40px;
+margin-bottom:35px;
 color:var(--accent);
 }
 
@@ -66,19 +61,19 @@ color:var(--accent);
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:20px;
 }
 
 .card{
 background:var(--card);
-padding:25px;
-border-radius:12px;
-width:220px;
+padding:20px;
+border-radius:10px;
+width:200px;
 }
 
 .card h3{
 color:var(--accent);
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 .card p{
@@ -90,75 +85,60 @@ color:var(--muted);
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:30px;
+gap:25px;
 }
 
 .plan{
 background:var(--card);
-padding:30px;
-border-radius:12px;
-width:260px;
-}
-
-.plan h3{
-color:var(--accent);
-margin-bottom:10px;
+padding:25px;
+border-radius:10px;
+width:240px;
 }
 
 .price{
-font-size:1.6rem;
-font-weight:700;
+font-size:1.5rem;
 color:var(--accent2);
-margin-bottom:10px;
+font-weight:700;
+margin:10px 0;
 }
 
 form{
 max-width:450px;
 margin:0 auto;
 background:var(--card);
-padding:35px;
-border-radius:12px;
+padding:30px;
+border-radius:10px;
 }
 
 label{
 display:block;
 text-align:left;
-margin-bottom:6px;
+margin-bottom:5px;
 font-weight:600;
 }
 
 input, select{
 width:100%;
 padding:12px;
-margin-bottom:18px;
+margin-bottom:15px;
 border-radius:6px;
 border:1px solid #1d3b55;
 background:#0b1c2b;
 color:white;
 font-size:14px;
-}
-
-/* Important: keep native dropdown behavior */
-select{
 appearance:auto;
--webkit-appearance:auto;
--moz-appearance:auto;
 }
 
-button{
+a.checkout-btn{
+display:block;
 width:100%;
 padding:14px;
-border:none;
-border-radius:6px;
 background:var(--accent);
 color:black;
 font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:#00c8e0;
+text-align:center;
+border-radius:6px;
+text-decoration:none;
 }
 
 footer{
@@ -166,11 +146,11 @@ text-align:center;
 padding:25px;
 color:var(--muted);
 background:#06111c;
-margin-top:50px;
+margin-top:40px;
 }
 
 @media(max-width:768px){
-.grid, .plan-box{
+.grid,.plan-box{
 flex-direction:column;
 align-items:center;
 }
@@ -182,19 +162,18 @@ align-items:center;
 
 <header>
 <h1>Dev-zibah Analytics</h1>
-<p>Data Analysis Mastery Program</p>
-<p class="highlight">Commences: 16th March 2026 | Duration: 4-6 Months</p>
+<p class="highlight">Commences: 16th March 2026 | Duration: 4 Months</p>
 </header>
 
 <section>
 <h2>Core Tools Covered</h2>
 <div class="grid">
-<div class="card"><h3>Python</h3><p>Data cleaning & analysis</p></div>
-<div class="card"><h3>R</h3><p>Statistical computing</p></div>
-<div class="card"><h3>SPSS</h3><p>Statistical testing</p></div>
-<div class="card"><h3>SAS</h3><p>Enterprise analytics</p></div>
-<div class="card"><h3>Power BI</h3><p>Dashboards & BI</p></div>
-<div class="card"><h3>SQL</h3><p>Database querying</p></div>
+<div class="card"><h3>Python</h3><p>Data Analysis</p></div>
+<div class="card"><h3>R</h3><p>Statistical Computing</p></div>
+<div class="card"><h3>SPSS</h3><p>Statistical Testing</p></div>
+<div class="card"><h3>SAS</h3><p>Enterprise Analytics</p></div>
+<div class="card"><h3>Power BI</h3><p>Business Intelligence</p></div>
+<div class="card"><h3>SQL</h3><p>Database Querying</p></div>
 </div>
 </section>
 
@@ -206,7 +185,6 @@ align-items:center;
 <div class="price">₦5,000 / Month</div>
 <p>Python, R, SPSS & SAS</p>
 </div>
-
 <div class="plan">
 <h3>Premium Plan</h3>
 <div class="price">₦10,000 / Month</div>
@@ -221,31 +199,31 @@ align-items:center;
 <form id="enrollForm">
 
 <label>Full Name</label>
-<input type="text" id="name" placeholder="Enter Full name" required>
+<input type="text" id="name" required>
 
 <label>Email Address</label>
-<input type="email" id="email" placeholder="e.g Ola@xyz.com" required>
+<input type="email" id="email" required>
 
-<label>University / Institution (Department)</label>
-<input type=" id="university" placeholder="e.g Olabisi Onabanjo University (Statistics)" required>
+<label>University / Institution</label>
+<input type="text" id="university" required>
 
 <label>Level</label>
-<select id="level" placeholder="Choose your level" required>
+<select id="level" required>
 <option value="">Select Your Level</option>
-<option value="100 Level">100 Level</option>
-<option value="200 Level">200 Level</option>
-<option value="300 Level">300 Level</option>
-<option value="400 Level">400 Level</option>
+<option>100 Level</option>
+<option>200 Level</option>
+<option>300 Level</option>
+<option>400 Level</option>
 </select>
 
 <label>Select Plan</label>
-<select id="plan" placeholder="Select Plan" required>
+<select id="plan" required>
 <option value="">Choose Plan</option>
-<option value="Standard Plan - ₦5,000 per month">Standard Plan - ₦5,000 / Month</option>
-<option value="Premium Plan - ₦10,000 per month">Premium Plan - ₦10,000 / Month (Includes standard plan + Power BI & SQL)</option>
+<option>Standard Plan - ₦5,000 per month</option>
+<option>Premium Plan - ₦10,000 per month</option>
 </select>
 
-<button type="submit">Proceed to Checkout✅</button>
+<a href="#" id="checkoutBtn" class="checkout-btn">Proceed to Checkout ✅</a>
 
 </form>
 </section>
@@ -255,11 +233,8 @@ align-items:center;
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+document.getElementById("checkoutBtn").addEventListener("click", function(e){
 
-const form = document.getElementById("enrollForm");
-
-form.addEventListener("submit", function(e){
 e.preventDefault();
 
 const name = document.getElementById("name").value.trim();
@@ -269,13 +244,11 @@ const level = document.getElementById("level").value;
 const plan = document.getElementById("plan").value;
 
 if(!name || !email || !university || !level || !plan){
-alert("Please complete all fields.");
+alert("Please fill all fields before proceeding.");
 return;
 }
 
-// IMPORTANT: Use international format without +
-// If your WhatsApp is Nigerian number like 0803..., convert to 234803...
-const phoneNumber = "2348107142883"; 
+const phoneNumber = "2348107142883";
 
 const message =
 `Hello Dev-zibah Analytics,
@@ -284,18 +257,16 @@ Email: ${email}.
 Institution: ${university}.
 Level: ${level}.
 Selected Plan: ${plan}.
-The program commences 16th March 2026 and runs for 4-6 months.
+Program starts 16th March 2026 (Duration: 4 months).
 I would like to proceed with payment.`;
 
 const whatsappURL =
 "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
-// Open in new tab (more reliable on mobile)
-window.open(whatsappURL, "_blank");
+window.location.href = whatsappURL;
 
 });
+</script>
 
-});
-   </script>
 </body>
 </html>
