@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dev-zibah Analytics | Data Analysis Mastery</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
---bg-dark:#050b14;
---panel:rgba(10,25,47,0.75);
---neon:#00f3ff;
---accent:#ff00cc;
---text-light:#e6f1ff;
---text-muted:#8892b0;
+--bg-dark:#071421;
+--card:#0d2236;
+--accent:#00e5ff;
+--accent2:#ff00cc;
+--text:#e6f1ff;
+--muted:#9fb3c8;
 }
 
 *{
@@ -25,105 +25,68 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#050b14,#0f2027,#1a2a40);
-color:var(--text-light);
+background:linear-gradient(135deg,#071421,#0c1f33);
+color:var(--text);
 }
 
-/* HERO */
 header{
-padding:120px 0;
 text-align:center;
-border-bottom:1px solid rgba(0,243,255,0.2);
+padding:100px 20px;
 }
 
 header h1{
-font-size:3rem;
-background:linear-gradient(90deg,var(--neon),var(--accent));
+font-size:2.5rem;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 header p{
-color:var(--text-muted);
-margin-bottom:15px;
+color:var(--muted);
+margin-bottom:10px;
 }
 
 .highlight{
-color:var(--neon);
+color:var(--accent);
 font-weight:600;
 }
 
-.btn{
-display:inline-block;
-padding:14px 35px;
-border-radius:8px;
-border:2px solid var(--neon);
-color:var(--neon);
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-background:transparent;
-}
-
-.btn:hover{
-background:var(--neon);
-color:#000;
-box-shadow:0 0 20px var(--neon);
-}
-
-/* TOOLS */
-.tools{
-padding:90px 0;
+section{
+padding:70px 20px;
 text-align:center;
 }
 
-.tools h2{
+h2{
 margin-bottom:40px;
-font-size:2rem;
-color:var(--neon);
+color:var(--accent);
 }
 
 .grid{
 display:flex;
 flex-wrap:wrap;
-gap:25px;
 justify-content:center;
+gap:25px;
 }
 
 .card{
-background:var(--panel);
-backdrop-filter:blur(10px);
-border-radius:15px;
-width:230px;
+background:var(--card);
 padding:25px;
-border:1px solid rgba(0,243,255,0.2);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(0,243,255,0.3);
-border-color:var(--neon);
+border-radius:12px;
+width:220px;
 }
 
 .card h3{
-color:var(--neon);
+color:var(--accent);
 margin-bottom:10px;
 }
 
 .card p{
-color:var(--text-muted);
 font-size:0.9rem;
+color:var(--muted);
 }
 
-/* PRICING */
-.pricing{
-padding:80px 0;
-text-align:center;
-}
-
-.plan-container{
+.plan-box{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
@@ -131,90 +94,86 @@ gap:30px;
 }
 
 .plan{
-background:var(--panel);
-padding:40px;
-border-radius:15px;
-width:280px;
-border:1px solid rgba(0,243,255,0.2);
-transition:0.3s;
-}
-
-.plan:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(0,243,255,0.3);
+background:var(--card);
+padding:30px;
+border-radius:12px;
+width:260px;
 }
 
 .plan h3{
-color:var(--neon);
-margin-bottom:15px;
+color:var(--accent);
+margin-bottom:10px;
 }
 
 .price{
-font-size:1.8rem;
-margin-bottom:15px;
-color:var(--accent);
-font-weight:bold;
-}
-
-/* ENROLL */
-.enroll{
-padding:100px 0;
-text-align:center;
+font-size:1.6rem;
+font-weight:700;
+color:var(--accent2);
+margin-bottom:10px;
 }
 
 form{
-max-width:500px;
-margin:auto;
-background:var(--panel);
-padding:40px;
-border-radius:15px;
-border:1px solid rgba(0,243,255,0.2);
+max-width:450px;
+margin:0 auto;
+background:var(--card);
+padding:35px;
+border-radius:12px;
 }
 
-form label{
+label{
 display:block;
+text-align:left;
 margin-bottom:6px;
 font-weight:600;
-text-align:left;
 }
 
-form input, form select{
+input, select{
 width:100%;
 padding:12px;
-margin-bottom:20px;
-background:#0a192f;
-border:1px solid rgba(0,243,255,0.3);
+margin-bottom:18px;
 border-radius:6px;
-color:var(--neon);
-}
-
-form input:focus, form select{
-width:100%;
-padding:12px;
-margin-bottom:20px;
-background:#0a192f;
-border:1px solid rgba(0,243,255,0.3);
-border-radius:6px;
+border:1px solid #1d3b55;
+background:#0b1c2b;
 color:white;
-appearance:auto;
+font-size:14px;
 }
-  
-form button{
+
+/* Important: keep native dropdown behavior */
+select{
+appearance:auto;
+-webkit-appearance:auto;
+-moz-appearance:auto;
+}
+
+button{
 width:100%;
+padding:14px;
+border:none;
+border-radius:6px;
+background:var(--accent);
+color:black;
+font-weight:600;
 cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#00c8e0;
 }
 
 footer{
 text-align:center;
-padding:25px 0;
-color:var(--text-muted);
-background:#02060d;
-margin-top:40px;
+padding:25px;
+color:var(--muted);
+background:#06111c;
+margin-top:50px;
 }
 
 @media(max-width:768px){
-header h1{font-size:2rem;}
-.grid,.plan-container{flex-direction:column;align-items:center;}
+.grid, .plan-box{
+flex-direction:column;
+align-items:center;
+}
 }
 </style>
 </head>
@@ -224,73 +183,69 @@ header h1{font-size:2rem;}
 <header>
 <h1>Dev-zibah Analytics</h1>
 <p>Data Analysis Mastery Program</p>
-<p class="highlight">Commences: 16th March 2026 | Duration: 4 Months</p>
-<a href="#enroll" class="btn">Enroll Now</a>
+<p class="highlight">Commences: 16th March 2026 | Duration: 4-6 Months</p>
 </header>
 
-<section class="tools">
+<section>
 <h2>Core Tools Covered</h2>
 <div class="grid">
-<div class="card"><h3>Python</h3><p>Data cleaning, analysis & visualization.</p></div>
-<div class="card"><h3>R Programming</h3><p>Advanced statistical computing.</p></div>
-<div class="card"><h3>SPSS</h3><p>Statistical testing & reporting.</p></div>
-<div class="card"><h3>SAS</h3><p>Enterprise & clinical analytics.</p></div>
-<div class="card"><h3>Power BI</h3><p>Interactive dashboards & business intelligence.</p></div>
-<div class="card"><h3>SQL</h3><p>Database querying & data extraction.</p></div>
+<div class="card"><h3>Python</h3><p>Data cleaning & analysis</p></div>
+<div class="card"><h3>R</h3><p>Statistical computing</p></div>
+<div class="card"><h3>SPSS</h3><p>Statistical testing</p></div>
+<div class="card"><h3>SAS</h3><p>Enterprise analytics</p></div>
+<div class="card"><h3>Power BI</h3><p>Dashboards & BI</p></div>
+<div class="card"><h3>SQL</h3><p>Database querying</p></div>
 </div>
 </section>
 
-<section class="pricing">
+<section>
 <h2>Select Your Plan</h2>
-<div class="plan-container">
-
+<div class="plan-box">
 <div class="plan">
 <h3>Standard Plan</h3>
 <div class="price">₦5,000 / Month</div>
-<p>Python, R, SPSS, SAS</p>
+<p>Python, R, SPSS & SAS</p>
 </div>
 
 <div class="plan">
 <h3>Premium Plan</h3>
 <div class="price">₦10,000 / Month</div>
-<p>Includes Everything in Standard + Power BI & SQL</p>
+<p>Standard + Power BI & SQL</p>
 </div>
-
 </div>
 </section>
 
-<section id="enroll" class="enroll">
+<section>
 <h2>Register Now</h2>
 
 <form id="enrollForm">
 
-<label>FULL NAME</label>
-<input type="text" id="name" placeholder="Enter Full name" required >
+<label>Full Name</label>
+<input type="text" id="name" required>
 
-<label>EMAIL ADDRESS</label>
-<input type="email" id="email" placeholder="Enter email" required>
+<label>Email Address</label>
+<input type="email" id="email" required>
 
-<label>UNIVERSITY / INSTITUTION (Department)</label>
-<input type="text" id="university" placeholder="e.g Olabisi Onabanjo University (Statistics)required>
+<label>University / Institution (Department)</label>
+<input type="text" id="university" required>
 
-<label>LEVEL</label> 
+<label>Level</label>
 <select id="level" required>
 <option value="">Select Your Level</option>
-<option>100 Level</option>
-<option>200 Level</option>
-<option>300 Level</option>
-<option>400 Level</option>
+<option value="100 Level">100 Level</option>
+<option value="200 Level">200 Level</option>
+<option value="300 Level">300 Level</option>
+<option value="400 Level">400 Level</option>
 </select>
 
-<label>LEVEL</label>
-<select id="level" required>
-  <option value="">Select Your Level</option>
-  <option value="100 Level">100 Level</option>
-  <option value="200 Level">200 Level</option>
-  <option value="300 Level">300 Level</option>
-  <option value="400 Level">400 Level</option>
+<label>Select Plan</label>
+<select id="plan" required>
+<option value="">Choose Plan</option>
+<option value="Standard Plan - ₦5,000 per month">Standard Plan - ₦5,000 / Month</option>
+<option value="Premium Plan - ₦10,000 per month">Premium Plan - ₦10,000 / Month (Includes Power BI & SQL)</option>
 </select>
-<button type="submit" class="btn">Proceed to Checkout</button>
+
+<button type="submit">Proceed to WhatsApp</button>
 
 </form>
 </section>
@@ -311,7 +266,7 @@ var plan = document.getElementById("plan").value;
 
 var phoneNumber = "+2348107142883";
 
-var message = `Hello Dev-zibah Analytics, my name is ${name}. My email is ${email}. I am from ${university}, currently in ${level}. I am enrolling for the ${plan}. The program commences 16th March 2026 and runs for 4 months. I would like to proceed with payment.`;
+var message = `Hello Dev-zibah Analytics, my name is ${name}. My email is ${email}. I am from ${university}, currently in ${level}. I am enrolling for the ${plan}. The program commences 16th March 2026 and runs for 4-6 months. I would like to proceed with payment.`;
 
 var encodedMessage = encodeURIComponent(message);
 
@@ -320,4 +275,4 @@ window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 </script>
 
 </body>
-  </html>
+</html>
