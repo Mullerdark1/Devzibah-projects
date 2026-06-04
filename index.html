@@ -42,6 +42,33 @@ background:linear-gradient(90deg,var(--accent),var(--accent2));
 -webkit-text-fill-color:transparent;
 margin-bottom:10px;
 }
+  #typing-text{
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg,#00f3ff,#ff00cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    min-height: 80px;
+}
+
+.subtitle{
+    margin-top: 15px;
+    color: #8892b0;
+    font-size: 1.1rem;
+}
+
+.cursor{
+    display:inline-block;
+    width:3px;
+    background:#00f3ff;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
 
 .highlight{
 color:var(--accent);
@@ -162,7 +189,7 @@ align-items:center;
 <body>
 
 <header>
-<h1>Dev-zibah Analytics</h1>
+<h1 id="typing-text">Dev-zibah Analytics</h1>
 <p class="highlight">Commences: 16th March 2026 | Duration: 6 Months</p>
 </header>
 
