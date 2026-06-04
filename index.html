@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dev-zibah Analytics | Data Analysis Mastery</title>
+
+<title>Dev-zibah Analytics | Data Analysis Mastery Program</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
 --bg:#071421;
 --card:#0d2236;
@@ -32,47 +34,30 @@ color:var(--text);
 header{
 text-align:center;
 padding:90px 20px;
-  border: 30px;
 }
 
-header h1{
-font-size:2.4rem;
+#typing-text{
+font-size:2.6rem;
+font-weight:700;
 background:linear-gradient(90deg,var(--accent),var(--accent2));
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
-margin-bottom:10px;
-}
-  #typing-text{
-    font-size: 3rem;
-    font-weight: 700;
-    background: linear-gradient(90deg,#00f3ff,#ff00cc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    min-height: 80px;
-}
-
-.subtitle{
-    margin-top: 15px;
-    color: #8892b0;
-    font-size: 1.1rem;
-}
-
-.cursor{
-    display:inline-block;
-    width:3px;
-    background:#00f3ff;
-    animation: blink 0.8s infinite;
-}
-
-@keyframes blink{
-    50%{
-        opacity:0;
-    }
+min-height:80px;
 }
 
 .highlight{
 color:var(--accent);
 font-weight:600;
+margin-top:10px;
+}
+
+.subtext{
+margin-top:15px;
+color:var(--muted);
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.7;
 }
 
 section{
@@ -95,8 +80,14 @@ gap:20px;
 .card{
 background:var(--card);
 padding:20px;
-border-radius:10px;
-width:200px;
+border-radius:12px;
+width:220px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(0,229,255,.25);
 }
 
 .card h3{
@@ -105,7 +96,7 @@ margin-bottom:8px;
 }
 
 .card p{
-font-size:0.9rem;
+font-size:.9rem;
 color:var(--muted);
 }
 
@@ -119,33 +110,40 @@ gap:25px;
 .plan{
 background:var(--card);
 padding:25px;
-border-radius:10px;
-width:240px;
+border-radius:12px;
+width:280px;
+transition:.3s;
+}
+
+.plan:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(255,0,204,.25);
 }
 
 .price{
-font-size:1.5rem;
+font-size:1.6rem;
 color:var(--accent2);
 font-weight:700;
 margin:10px 0;
 }
 
 form{
-max-width:450px;
+max-width:500px;
 margin:0 auto;
 background:var(--card);
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 }
 
 label{
 display:block;
 text-align:left;
-margin-bottom:5px;
+margin-bottom:6px;
 font-weight:600;
 }
 
-input, select{
+input,
+select{
 width:100%;
 padding:12px;
 margin-bottom:15px;
@@ -154,19 +152,29 @@ border:1px solid #1d3b55;
 background:#0b1c2b;
 color:white;
 font-size:14px;
-appearance:auto;
 }
 
-a.checkout-btn{
+input:focus,
+select:focus{
+outline:none;
+border-color:var(--accent);
+}
+
+.checkout-btn{
 display:block;
 width:100%;
 padding:14px;
 background:var(--accent);
 color:black;
-font-weight:600;
+font-weight:700;
 text-align:center;
 border-radius:6px;
 text-decoration:none;
+transition:.3s;
+}
+
+.checkout-btn:hover{
+background:#00c8e0;
 }
 
 footer{
@@ -178,82 +186,148 @@ margin-top:40px;
 }
 
 @media(max-width:768px){
-.grid,.plan-box{
+
+#typing-text{
+font-size:2rem;
+}
+
+.grid,
+.plan-box{
 flex-direction:column;
 align-items:center;
 }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1 id="typing-text">Dev-zibah Analytics</h1>
-<p class="highlight">Commences: 16th March 2026 | Duration: 6 Months</p>
+
+<h1 id="typing-text"></h1>
+
+<p class="highlight">
+📅 Commences: 16th March 2026 | ⏳ Duration: 6 Months
+</p>
+
+<p class="subtext">
+Master practical Data Analysis skills used in real industries.
+Learn live through Google Meet & Discord.
+Certificate awarded upon successful completion.
+Top-performing students may have opportunities to join the Dev-zibah Analytics startup team.
+</p>
+
 </header>
 
 <section>
+
 <h2>Core Tools Covered</h2>
+
 <div class="grid">
-<div class="card"><h3>Python</h3><p>Data Analysis</p></div>
-<div class="card"><h3>R</h3><p>Statistical Computing</p></div>
-<div class="card"><h3>SPSS</h3><p>Statistical Testing</p></div>
-<div class="card"><h3>SAS</h3><p>Enterprise Analytics</p></div>
-<div class="card"><h3>Power BI</h3><p>Business Intelligence</p></div>
-<div class="card"><h3>SQL</h3><p>Database Querying</p></div>
+
+<div class="card">
+<h3>Python</h3>
+<p>Data Analysis & Automation</p>
 </div>
+
+<div class="card">
+<h3>R Programming</h3>
+<p>Statistical Computing</p>
+</div>
+
+<div class="card">
+<h3>SPSS</h3>
+<p>Research & Statistical Testing</p>
+</div>
+
+<div class="card">
+<h3>SAS</h3>
+<p>Enterprise Analytics</p>
+</div>
+
+<div class="card">
+<h3>Power BI</h3>
+<p>Dashboards & Visualization</p>
+</div>
+
+<div class="card">
+<h3>SQL</h3>
+<p>Database Querying</p>
+</div>
+
+</div>
+
 </section>
 
 <section>
+
 <h2>Select Your Plan</h2>
+
 <div class="plan-box">
+
 <div class="plan">
 <h3>Standard Plan</h3>
 <div class="price">₦5,000 / Month</div>
-<p>Python, R, SPSS & SAS</p>
+<p>
+Python, R Programming, SPSS, SAS and other commercial software.
+</p>
 </div>
+
 <div class="plan">
 <h3>Premium Plan</h3>
 <div class="price">₦10,000 / Month</div>
-<p>Standard + Power BI & SQL</p>
+<p>
+Everything in Standard Plan + Power BI + SQL.
+</p>
 </div>
+
 </div>
+
 </section>
 
 <section>
+
 <h2>Register Now</h2>
 
 <form id="enrollForm">
 
 <label>Full Name</label>
-<input type="text" id="name" placeholder="Enter Full name" required>
+<input type="text" id="name" placeholder="Enter your full name" required>
 
 <label>Email Address</label>
-<input type="email" id="email" placeholder="Enter email" required>
+<input type="email" id="email" placeholder="Enter your email address" required>
 
-<label>University / Institution (Department)</label>
-<input type="text" id="university" placeholder="e.g Olabisi Onabanjo University(Statistics)" required>
+<label>University / Institution</label>
+<input type="text" id="university" placeholder="Enter your institution" required>
 
 <label>Level</label>
 <select id="level" required>
 <option value="">Select Your Level</option>
-<option value="100 level">100 Level</option>
-<option value="200 level">200 Level</option>
-<option value="300 level">300 Level</option>
-<option value="400 level">400 Level</option>
+<option value="100 Level">100 Level</option>
+<option value="200 Level">200 Level</option>
+<option value="300 Level">300 Level</option>
+<option value="400 Level">400 Level</option>
 </select>
 
 <label>Select Plan</label>
 <select id="plan" required>
 <option value="">Choose Plan</option>
-<option>Standard Plan - ₦5,000 per month</option>
-<option>Premium Plan - ₦10,000 per month (Plan includes standard + PowerBI + SQL</option>
+<option value="Standard Plan - ₦5,000 per month">
+Standard Plan - ₦5,000 / Month
+</option>
+<option value="Premium Plan - ₦10,000 per month">
+Premium Plan - ₦10,000 / Month (Includes Power BI & SQL)
+</option>
 </select>
 
-<a href="#" id="checkoutBtn" class="checkout-btn">Proceed to Checkout ✅</a>
+<a href="#" id="checkoutBtn" class="checkout-btn">
+Proceed to Checkout ✅
+</a>
 
 </form>
+
 </section>
 
 <footer>
@@ -261,6 +335,65 @@ align-items:center;
 </footer>
 
 <script>
+
+/* Typing Animation */
+
+const texts = [
+"Welcome to Dev-zibah Analytics",
+"Master Data Analysis Skills",
+"One Skill. Diverse Opportunities",
+"Join Our Analytics Startup Team"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+
+const typingElement = document.getElementById("typing-text");
+
+function typeEffect(){
+
+if(charIndex < texts[textIndex].length){
+
+typingElement.innerHTML =
+texts[textIndex].substring(0,charIndex + 1);
+
+charIndex++;
+
+setTimeout(typeEffect,100);
+
+}else{
+
+setTimeout(eraseEffect,2000);
+
+}
+
+}
+
+function eraseEffect(){
+
+if(charIndex > 0){
+
+typingElement.innerHTML =
+texts[textIndex].substring(0,charIndex - 1);
+
+charIndex--;
+
+setTimeout(eraseEffect,50);
+
+}else{
+
+textIndex = (textIndex + 1) % texts.length;
+
+setTimeout(typeEffect,500);
+
+}
+
+}
+
+window.addEventListener("load", typeEffect);
+
+/* WhatsApp Checkout */
+
 document.getElementById("checkoutBtn").addEventListener("click", function(e){
 
 e.preventDefault();
@@ -272,28 +405,43 @@ const level = document.getElementById("level").value;
 const plan = document.getElementById("plan").value;
 
 if(!name || !email || !university || !level || !plan){
+
 alert("Please fill all fields before proceeding.");
+
 return;
+
 }
 
 const phoneNumber = "2348107142883";
 
 const message =
 `Hello Dev-zibah Analytics,
+
 My name is ${name}.
-Email: ${email}.
-Institution: ${university}.
-Level: ${level}.
-Selected Plan: ${plan}.
-Program starts 16th March 2026 (Duration: 4 months).
+
+Email: ${email}
+
+Institution: ${university}
+
+Level: ${level}
+
+Selected Plan: ${plan}
+
+Program Commencement:
+16th March 2026
+
+Duration:
+4 Months
+
 I would like to proceed with payment.`;
 
 const whatsappURL =
-"https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-window.location.href = whatsappURL;
+window.open(whatsappURL,"_blank");
 
 });
+
 </script>
 
 </body>
